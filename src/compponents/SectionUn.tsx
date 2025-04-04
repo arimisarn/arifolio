@@ -4,7 +4,7 @@ import {motion} from "framer-motion"
 import { BiDownload } from "react-icons/bi"
 import cv from '../assets/CV/Intro IA 01.pdf'
 
-const container = (delay) => ({
+const container = (delay: number) => ({
     hidden : {x: -100 , opacity:0},
     visible : {
         x: 0,

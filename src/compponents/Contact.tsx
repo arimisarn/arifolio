@@ -14,7 +14,7 @@ const Contact = () => {
             Contact
         </motion.h2>
         <div className="text-center tracking-tighter">
-        {CONT.map((cont, index) => (
+        {CONT.map((cont, _) => (
            <motion.div
                >
              <motion.p 

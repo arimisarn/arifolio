@@ -7,17 +7,17 @@ import { SiDocker } from "react-icons/si"
 import {motion} from "framer-motion"
 
 
-const iconMotion = (duration) => ({
-    initial : { y: -10},
-    animate : {
-        y : [10, -10],
-        transition :{
-            duration: duration  ,
-            ease : "linear",
-            repeat : Infinity,
-            repeatType: "reverse",  
-        },
-    },
+const iconMotion = (duration: number) => ({
+  initial: { y: 0 },
+  animate: {
+    y: [0, -10, 0], // Exemple de mouvement
+    transition: {
+      duration: duration,
+      ease: 'easeInOut',
+      repeat: Infinity,
+      repeatType: 'loop' as const // Utilisation d'un type littéral pour éviter l'erreur
+    }
+  }
 })
 
 const Techno = () => {

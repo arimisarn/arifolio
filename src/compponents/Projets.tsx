@@ -1,5 +1,4 @@
 import { PROJETS } from "../constants"
-import ProjetImg from '../assets/about.jpg'
 import {motion} from "framer-motion"
 
 
