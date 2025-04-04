@@ -1,4 +1,4 @@
-import uniccon from '../assets/uniconn.png'
+import unnicon from '../assets/uniconn.png'
 
 export const SECTIONONE_PARAGRAPHE = `Je suis une developpeuse passionnée par la technologie et le génie logiciel. Mon experience
 se concentre sur le développement d'application web et de sites internet, où j'utilise des outils modernes comme React et Typescript.
@@ -29,7 +29,7 @@ export const PROJETS = [
         description : `Une plateforme dédié aux universités, conçu pour la gestion des étudiants, des profs
         des notes des étudiants, etc ... Là où les parents peuvent s'interagir avec l'établissement , avec authentification`,
         techno : ["HTML" , "CSS" , "Bootstrap", "MySQL", "PHP", "XAMPP"],
-        images : uniccon
+        images : unnicon
     },
     {
         titre : "Ibankiko",
