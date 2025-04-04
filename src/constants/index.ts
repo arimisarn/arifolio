@@ -1,3 +1,5 @@
+import uniccon from '../assets/uniconn.png'
+
 export const SECTIONONE_PARAGRAPHE = `Je suis une developpeuse passionnée par la technologie et le génie logiciel. Mon experience
 se concentre sur le développement d'application web et de sites internet, où j'utilise des outils modernes comme React et Typescript.
 J'ai également des compétences en bases de données notamment MySQL et PostgreSQL. Mon objectif est de créer
@@ -20,21 +22,14 @@ export const EXPERIENCE = [
     },
 ]
 
-export const projet2 = "../asset/uniconn.png"
-export const projet3 = "../asset/banque.png"
 export const PROJETS = [
-    {
-        titre : "Ekestrian Stallions",
-        description : `Un site web qui vend des sémences de chevaux, nous avons conçu le site de façon "statique"`,
-        techno : ["HTML" , "CSS" , "JavaScript"],
-    },
     
     {
         titre : "UniConnect",
         description : `Une plateforme dédié aux universités, conçu pour la gestion des étudiants, des profs
         des notes des étudiants, etc ... Là où les parents peuvent s'interagir avec l'établissement , avec authentification`,
         techno : ["HTML" , "CSS" , "Bootstrap", "MySQL", "PHP", "XAMPP"],
-        images: projet2,
+        images : uniccon
     },
     {
         titre : "Ibankiko",

@@ -15,6 +15,7 @@ const container = (delay: number) => ({
 
 const SectionUn = () => {
   return (
+    <>
     <div className="border-b border-neutral-800 pb-4 lg:mb-35">
         <div className="flex flex-wrap">
             <div className="w-full lg:w-1/2">
@@ -79,6 +80,7 @@ const SectionUn = () => {
             </div>
         </div>
     </div>
+    </>
   )
 }
 
