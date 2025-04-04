@@ -14,7 +14,7 @@ const NavBar = () => {
       <a href="">
         <FaLinkedin className='hover:text-indigo-400 hover:text-3xl transition-all'/>
       </a>
-      <a href="https://github/arimisa">
+      <a href="https://github/arimisarn">
         <FaGithub className='hover:text-indigo-400 hover:text-3xl transition-all'/>
       </a>
       <a href="">
