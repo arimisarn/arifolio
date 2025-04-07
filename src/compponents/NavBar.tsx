@@ -2,6 +2,7 @@ import logo from '../assets/natha3.png'
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa"
+import { FiMail } from 'react-icons/fi'
 
 
 const NavBar = () => {
@@ -17,8 +18,8 @@ const NavBar = () => {
       <a href="https://github.com/arimisarn">
         <FaGithub className='hover:text-indigo-400 hover:text-3xl transition-all'/>
       </a>
-      <a href="">
-        <FaInstagram className='hover:text-indigo-400 hover:text-3xl transition-all'/>
+      <a href="https://gitgmailhub.com/">
+        <FiMail className='hover:text-indigo-400 hover:text-3xl transition-all'/>
       </a>
     </div>
    </nav>
