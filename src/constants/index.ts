@@ -53,7 +53,6 @@ export const PROJETS = [
 
 export const CONT = [
     {
-        address : `LOT II H 39 VA Ankadindramamy`,
         num : "033 45 669 72",
         mail : "arimisa.dev@gmail.com"
     }
