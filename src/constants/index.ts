@@ -28,14 +28,14 @@ export const PROJETS = [
         titre : "UniConnect",
         description : `Une plateforme dédié aux universités, conçu pour la gestion des étudiants, des profs
         des notes des étudiants, etc ... Là où les parents peuvent s'interagir avec l'établissement , avec authentification`,
-        techno : ["HTML" , "CSS" , "Bootstrap", "MySQL", "PHP", "XAMPP"],
+        techno : ["HTML" ,"Bootstrap", "MySQL", "PHP"],
         images : unnicon
     },
     {
         titre : "Ibankiko",
         description : `Un site web de banque en ligne où les utilisateurs peuvent visionner facilement leurs
         transactions effectuées , les types de banques ... avec authentification`,
-        techno : ["HTML" , "CSS" , "JavaScript", "MySQL", "PHP", "XAMPP"],
+        techno : ["JavaScript", "MySQL", "PHP"],
     },
     {
         titre : "admin-dashboard",

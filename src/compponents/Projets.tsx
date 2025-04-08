@@ -22,17 +22,15 @@ const Projets = () => {
                      transition={{duration:1}}
                      className="w-full lg:w-1/4">
                         <img 
-                        width={150}
-                        height={150}
                         src={projet.images}
-                        className="mb-6 ml-5 rounded"
+                        className="mb-6 sm:ml-0 ml-5 rounded w-72 sm:w-40"
                         alt="" />
                     </motion.div>
                     <motion.div 
                      whileInView={{opacity:1, x:0}}
                      initial={{opacity:0, x:100}}
                      transition={{duration:1}}
-                     className="m-5 sm:m-0 w-full.lg:w-3/4 max-w-xl">
+                     className="m-5 sm:m-0 w-full lg:w-3/4 max-w-xl">
                         <h6 className="mb-2 font-semibold">
                             {projet.titre}
                         </h6>

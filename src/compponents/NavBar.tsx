@@ -1,7 +1,6 @@
 import logo from '../assets/natha3.png'
 import { FaLinkedin } from "react-icons/fa"
 import { FaGithub } from "react-icons/fa"
-import { FaInstagram } from "react-icons/fa"
 import { FiMail } from 'react-icons/fi'
 
 

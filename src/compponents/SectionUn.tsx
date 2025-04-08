@@ -72,7 +72,7 @@ const SectionUn = () => {
                     initial={{ x: 100, opacity: 0}}
                     animate={{ x:0, opacity: 1}}
                     transition={{duration:1, delay: 1.2}}
-                    className="profile transition-transform duration-300" 
+                    className="profile transition-transform duration-300 sm:w-80 w-72 rounded-lg" 
                     src={profile} 
                     alt="" 
                     />
