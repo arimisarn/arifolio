@@ -3,7 +3,7 @@ import {motion} from "framer-motion"
 
 
 
-const Projets = () => {
+const Projets = () => { 
   return (
     <div className="border-b border-neutral-800 pb-4">
         <motion.h2

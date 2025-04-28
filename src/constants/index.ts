@@ -38,13 +38,7 @@ export const PROJETS = [
         techno : ["JavaScript", "MySQL", "PHP"],
     },
     {
-        titre : "admin-dashboard",
-        description : `Un tableau de bord admin, avec des effets visuels, conçu statiquement. 
-        Ou on peut visualiser les progressions`,
-        techno : ["React", "Tailwindcss", "Recharts"],
-    },
-    {
-        titre : "portfolio-arimisa",
+        titre : "arifolio",
         description : `Un portfolio, avec des effets visuels pour attirer l'attention des visualiseurs.
         C'est un projet statique`,
         techno : ["React", "Tailwindcss", 'Framer Motion'],
