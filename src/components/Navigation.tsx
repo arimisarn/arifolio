@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 1.5, duration: 0.8 }}
     >
-      <div className="flex flex-row sm:flex-col space-x-4 sm:space-x-0 sm:space-y-4 bg-white/40 dark:bg-white/5 backdrop-blur-md rounded-2xl p-4 border border-white/20 dark:border-white/10 shadow-lg">
+      <div className="flex mx-1 sm:mx-0 flex-row sm:flex-col space-x-4 sm:space-x-0 sm:space-y-4 bg-white/40 dark:bg-white/5 backdrop-blur-md rounded-2xl p-4 border border-white/20 dark:border-white/10 shadow-lg">
         {navItems.map((item, index) => (
           <motion.a
             key={item.href}
@@ -40,8 +40,7 @@ const Navigation: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.8 + index * 0.1 }}
           >
-            <item.icon className="w-6 h-6 text-gray-800 dark:text-white group-hover:text-purple-500 transition-colors" />
-            {/* Tooltip (optionnel sur mobile) */}
+            <item.icon className="w-4 h-4 sm:w-6 sm:h-6 text-gray-800 dark:text-white group-hover:text-purple-500 transition-colors" />
             <motion.div
               className="absolute left-full ml-4 px-3 py-2 bg-gray-900/90 text-white text-sm rounded-lg whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none shadow-md hidden sm:block"
               initial={{ x: -10 }}
