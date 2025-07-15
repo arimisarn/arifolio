@@ -1,23 +1,23 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import * as Icons from 'react-icons/si';
-import { portfolioData } from '../data/portfolio';
+import React from "react";
+import { motion } from "framer-motion";
+import * as Icons from "react-icons/si";
+import { portfolioData } from "../data/portfolio";
 
 const TechnologiesSection: React.FC = () => {
   const { technologies } = portfolioData;
 
   const categories = {
-    frontend: technologies.filter(tech => tech.category === 'frontend'),
-    backend: technologies.filter(tech => tech.category === 'backend'),
-    database: technologies.filter(tech => tech.category === 'database'),
-    tools: technologies.filter(tech => tech.category === 'tools'),
+    frontend: technologies.filter((tech) => tech.category === "frontend"),
+    backend: technologies.filter((tech) => tech.category === "backend"),
+    database: technologies.filter((tech) => tech.category === "database"),
+    tools: technologies.filter((tech) => tech.category === "tools"),
   };
 
   const categoryNames = {
-    frontend: 'Frontend',
-    backend: 'Backend',
-    database: 'Base de données',
-    tools: 'Outils',
+    frontend: "Frontend",
+    backend: "Backend",
+    database: "Base de données",
+    tools: "Outils",
   };
 
   const containerVariants = {
@@ -72,7 +72,9 @@ const TechnologiesSection: React.FC = () => {
                 className="space-y-3"
               >
                 {techs.map((tech) => {
-                  const IconComponent = Icons[tech.icon as keyof typeof Icons] as React.ComponentType<{ className?: string }>;
+                  const IconComponent = Icons[
+                    tech.icon as keyof typeof Icons
+                  ] as React.ComponentType<{ className?: string }>;
                   return (
                     <motion.div
                       key={tech.name}
@@ -80,10 +82,8 @@ const TechnologiesSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
                     >
-                      <IconComponent 
-                        className="w-6 h-6" 
-                        style={{ color: tech.color }}
-                      />
+                      <IconComponent className={`w-6 h-6 ${tech.color}`} />
+
                       <span className="text-gray-700 dark:text-gray-300 font-medium">
                         {tech.name}
                       </span>
