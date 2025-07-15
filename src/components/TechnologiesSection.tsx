@@ -82,7 +82,9 @@ const TechnologiesSection: React.FC = () => {
                       whileHover={{ scale: 1.05 }}
                       className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
                     >
-                      <IconComponent className={`w-6 h-6 ${tech.color}`} />
+                      <span style={{ color: tech.color }}>
+                        <IconComponent className="w-6 h-6" />
+                      </span>
 
                       <span className="text-gray-700 dark:text-gray-300 font-medium">
                         {tech.name}
