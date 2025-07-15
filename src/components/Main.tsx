@@ -33,7 +33,7 @@ const Main: React.FC = () => {
               transition={{ delay: 0.2 }}
               src={personal.photo}
               alt={personal.name}
-              className="w-32 h-32 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg object-cover"
+              className="w-40 h-40 rounded-full mx-auto mb-6 border-4 border-blue-500 shadow-lg object-cover"
             />
           )}
           <motion.h1

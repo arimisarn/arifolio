@@ -1,4 +1,6 @@
 import fiteny from "../assets/fiteny flow.png";
+import pf from "../assets/IMG_20250510_150605~2.jpg";
+
 export interface Technology {
   name: string;
   icon: string;
@@ -51,8 +53,7 @@ export const portfolioData: PortfolioData = {
     email: "arimisa.dev@email.com",
     phone: "+33 ",
     location: "Antananarivo, Madagascar",
-    photo:
-      "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=400",
+    photo: pf,
     github: "https://github.com/arimisarn",
     linkedin: "https://facebook.com/hary.randria.121",
   },
@@ -93,7 +94,7 @@ export const portfolioData: PortfolioData = {
         "Mise en place de tests unitaires et d'intégration avec Vue JS",
       ],
       technologies: ["Vue JS", "Docker", "Git", "JavaScript"],
-      temps: "Temps partiel"
+      temps: "Temps partiel",
     },
   ],
   projects: [
