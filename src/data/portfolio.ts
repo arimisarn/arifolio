@@ -1,5 +1,6 @@
 import fiteny from "../assets/fiteny flow.png";
 import pf from "../assets/IMG_20250510_150605~2.jpg";
+import tsinjo from "../assets/tsinjo.png"
 
 export interface Technology {
   name: string;
@@ -112,7 +113,8 @@ export const portfolioData: PortfolioData = {
       description: "Plateforme de coaching personnalisé via IA",
       technologies: ["React", "TypeScript", "Django", "PostgreSQL", "Mistral"],
       githubUrl: "https://github.com/arimisarn/tsinjool2",
-      liveUrl: "https://tsinjool.vercel.app",
+      liveUrl: "a",
+      image: tsinjo,
     },
   ],
 };
