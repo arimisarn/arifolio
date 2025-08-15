@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Github, Facebook, Mail, MapPin, Phone } from "lucide-react";
+import { Github, Facebook, Mail, MapPin, Download } from "lucide-react";
 import { portfolioData } from "../data/portfolio";
 import arifolio from "../assets/arifolio.png";
+import cv from "../assets/Arimisa-Nathalie-CV.pdf";
 
 const Main: React.FC = () => {
   const { personal } = portfolioData;
@@ -75,17 +76,33 @@ const Main: React.FC = () => {
             <Mail className="w-4 h-4" />
             {personal.email}
           </a>
-          <a
+          {/* <a
             href={`tel:${personal.phone}`}
             className="flex items-center gap-2 px-4 py-2 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors"
           >
             <Phone className="w-4 h-4" />
             {personal.phone}
-          </a>
+          </a> */}
           <span className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg">
             <MapPin className="w-4 h-4" />
             {personal.location}
           </span>
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1 }}
+          className="flex flex-wrap justify-center gap-4 mb-8"
+        >
+          <a
+            href={cv}
+            download="Arimisa-Nathalie-CV.pdf"
+            className="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-lg"
+          >
+            <Download className="w-4 h-4" />
+            Télecharger mon CV
+          </a>
         </motion.div>
 
         <motion.div
