@@ -1,6 +1,7 @@
 import fiteny from "../assets/fiteny flow.png";
 import pf from "../assets/IMG_20250510_150605~2.jpg";
 import tsinjo from "../assets/tsinjo.png"
+import tailwind from "../assets/tailwind-css-trainer.png"
 
 export interface Technology {
   name: string;
@@ -115,6 +116,14 @@ export const portfolioData: PortfolioData = {
       githubUrl: "https://github.com/arimisarn/Tsinjool",
       liveUrl: "https://tsinjool.vercel.app",
       image: tsinjo,
+    },
+    {
+      title: "Tailwind-css-trainer",
+      description: "Plateforme d'exercice / quiz sur les bases de Tailwind CSS",
+      technologies: ["React", "TypeScript", "Django", "PostgreSQL", "Mistral"],
+      githubUrl: "https://github.com/arimisarn/Tailwind-css-trainer",
+      liveUrl: "https://tailwind-css-trainer.vercel.app",
+      image: tailwind,
     },
   ],
 };
