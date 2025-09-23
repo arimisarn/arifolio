@@ -120,7 +120,7 @@ export const portfolioData: PortfolioData = {
     {
       title: "Tailwind-css-trainer",
       description: "Plateforme d'exercice / quiz sur les bases de Tailwind CSS",
-      technologies: ["React", "TypeScript", "Django", "PostgreSQL", "Mistral"],
+      technologies: ["React", "TypeScript", "Tailwindcss"],
       githubUrl: "https://github.com/arimisarn/Tailwind-css-trainer",
       liveUrl: "https://tailwind-css-trainer.vercel.app",
       image: tailwind,
