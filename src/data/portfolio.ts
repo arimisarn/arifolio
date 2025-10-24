@@ -1,13 +1,16 @@
 import fiteny from "../assets/fiteny flow.png";
 import pf from "../assets/IMG_20250510_150605~2.jpg";
-import tsinjo from "../assets/tsinjo.png"
-import tailwind from "../assets/tailwind-css-trainer.png"
+import tsinjo from "../assets/tsinjo.png";
+import nathagram from "../assets/nathagram.png";
+
+import tailwind from "../assets/tailwind-css-trainer.png";
 
 export interface Technology {
   name: string;
   icon: string;
-  category: "frontend" | "backend" | "database" | "tools";
+  category: "frontend" | "backend" | "database" | "tools" | "mobile";
   color: string;
+  level?: number; // Niveau de maîtrise (0-100)
 }
 
 export interface Experience {
@@ -60,32 +63,111 @@ export const portfolioData: PortfolioData = {
     linkedin: "https://facebook.com/hary.randria.121",
   },
   technologies: [
-    { name: "React", icon: "SiReact", category: "frontend", color: "#61DAFB" },
+    {
+      name: "React",
+      icon: "SiReact",
+      category: "frontend",
+      color: "#61DAFB",
+      level: 85,
+    },
     {
       name: "TypeScript",
       icon: "SiTypescript",
       category: "frontend",
       color: "#3178C6",
+      level: 80,
+    },
+    {
+      name: "JavaScript",
+      icon: "SiJavascript",
+      category: "frontend",
+      color: "#eab308",
+      level: 90,
     },
     {
       name: "Tailwind CSS",
       icon: "SiTailwindcss",
       category: "frontend",
       color: "#06B6D4",
+      level: 90,
     },
-    { name: "Django", icon: "SiDjango", category: "backend", color: "#092E20" },
+    {
+      name: "Django",
+      icon: "SiDjango",
+      category: "backend",
+      color: "#092E20",
+      level: 85,
+    },
     {
       name: "PostgreSQL",
       icon: "SiPostgresql",
       category: "database",
       color: "#336791",
+      level: 70,
     },
-    { name: "Docker", icon: "SiDocker", category: "tools", color: "#2496ED" },
-    { name: "Git", icon: "SiGit", category: "tools", color: "#F05032" },
-    { name: "GitHub", icon: "SiGithub", category: "tools", color: "#181717" },
-    { name: "Postman", icon: "SiPostman", category: "tools", color: "#FF6C37" },
+    {
+      name: "MySQL",
+      icon: "SiMysql",
+      category: "database",
+      color: "#336791",
+      level: 60,
+    },
+    {
+      name: "Docker",
+      icon: "SiDocker",
+      category: "tools",
+      color: "#2496ED",
+      level: 60,
+    },
+    {
+      name: "Git",
+      icon: "SiGit",
+      category: "tools",
+      color: "#F05032",
+      level: 70,
+    },
+    {
+      name: "GitHub",
+      icon: "SiGithub",
+      category: "tools",
+      color: "#181717",
+      level: 70,
+    },
+    {
+      name: "Postman",
+      icon: "SiPostman",
+      category: "tools",
+      color: "#FF6C37",
+      level: 60,
+    },
   ],
   experiences: [
+    {
+      title: "Développeuse full-stack",
+      company: "Abba Villa Host",
+      location: "Varsovie , Pologne",
+      period: "Octobre 2025 - Maintenant",
+      description: [
+        "Développement d’applications web fullstack avec Django (backend) et React + TypeScript (frontend",
+        "Gestion de projets via conteneurs Docker et accès SSH pour le déploiement et la maintenance.",
+        "Collaboration avec l’équipe sur des workflows CI/CD, optimisation des performances et modularité du code",
+      ],
+      technologies: ["Django", "React", "Docker", "Python", "TypeScript"],
+      temps: "Remote - Temps partiel",
+    },
+    {
+      title: "Enseignante en technologie frontend",
+      company: "IS-IESI",
+      location: "Ambatomainty, Madacascar",
+      period: "Août 2025 - Maintenant",
+      description: [
+        "Formation des étudiants aux technologies moderne",
+        "Développement de support pédagodique ",
+        "Mentorat sur des projets ",
+      ],
+      technologies: ["HTML", "CSS", "JS", "Tailwindcss", "ReactJs"],
+      temps: "Temps partiel",
+    },
     {
       title: "Stagiaire Développeuse",
       company: "NosyTech",
@@ -101,15 +183,6 @@ export const portfolioData: PortfolioData = {
   ],
   projects: [
     {
-      title: "FitenyFlow",
-      description:
-        "Plateforme de reformulation de phrase en Anglais ou Français",
-      technologies: ["React", "Meta Llama", "TypeScript", "Tailwindcss"],
-      githubUrl: "https://github.com/arimisarn/FitenyFlow",
-      liveUrl: "https://fiteny-flow.vercel.app",
-      image: fiteny,
-    },
-    {
       title: "Tsinjool",
       description: "Plateforme de coaching personnalisé via IA",
       technologies: ["React", "TypeScript", "Django", "PostgreSQL", "Mistral"],
@@ -118,12 +191,37 @@ export const portfolioData: PortfolioData = {
       image: tsinjo,
     },
     {
+      title: "FitenyFlow",
+      description:
+        "Plateforme de reformulation & traduction de phrase en Anglais ou Français",
+      technologies: ["React", "Meta Llama", "TypeScript", "Tailwindcss"],
+      githubUrl: "https://github.com/arimisarn/FitenyFlow",
+      liveUrl: "https://fiteny-flow.vercel.app",
+      image: fiteny,
+    },
+
+    {
       title: "Tailwind-css-trainer",
       description: "Plateforme d'exercice / quiz sur les bases de Tailwind CSS",
       technologies: ["React", "TypeScript", "Tailwindcss"],
       githubUrl: "https://github.com/arimisarn/Tailwind-css-trainer",
       liveUrl: "https://tailwind-css-trainer.vercel.app",
       image: tailwind,
+    },
+    {
+      title: "Nathagram",
+      description: "Site de Réseau social inspiré de Facebook et Instagram",
+      technologies: [
+        "React",
+        "Django",
+        "TypeScript",
+        "Tailwindcss",
+        "Python",
+        "PostgreSQL",
+      ],
+      githubUrl: " ",
+      liveUrl: " ",
+      image: nathagram,
     },
   ],
 };

@@ -1,101 +1,131 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import * as Icons from "react-icons/si";
 import { portfolioData } from "../data/portfolio";
 
 const TechnologiesSection: React.FC = () => {
   const { technologies } = portfolioData;
+  const [activeCategory, setActiveCategory] = useState<string>("all");
 
   const categories = {
+    all: technologies,
     frontend: technologies.filter((tech) => tech.category === "frontend"),
     backend: technologies.filter((tech) => tech.category === "backend"),
     database: technologies.filter((tech) => tech.category === "database"),
     tools: technologies.filter((tech) => tech.category === "tools"),
   };
 
-  const categoryNames = {
+  const categoryLabels: Record<string, string> = {
+    all: "Toutes",
     frontend: "Frontend",
     backend: "Backend",
     database: "Base de données",
     tools: "Outils",
   };
 
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
+  const displayedTechs = categories[activeCategory as keyof typeof categories];
 
   return (
-    <section id="skills" className="py-20 px-4 relative">
-      <div className="max-w-6xl mx-auto">
-        <motion.h2
+    <section id="skills" className="py-20 px-4 relative bg-gray-50 dark:bg-gray-800">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16"
+          viewport={{ once: true }}
+          className="text-center mb-12"
         >
-          Technologies
-        </motion.h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+            Technologies & Compétences
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300">
+            Mon stack technique et mes niveaux de maîtrise
+          </p>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {Object.entries(categories).map(([category, techs]) => (
-            <motion.div
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          viewport={{ once: true }}
+          className="flex flex-wrap justify-center gap-3 mb-12"
+        >
+          {Object.keys(categoryLabels).map((category) => (
+            <button
               key={category}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
+              onClick={() => setActiveCategory(category)}
+              className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${activeCategory === category
+                  ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg scale-105"
+                  : "bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:shadow-md"
+                }`}
             >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                {categoryNames[category as keyof typeof categoryNames]}
-              </h3>
-              <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                className="space-y-3"
-              >
-                {techs.map((tech) => {
-                  const IconComponent = Icons[
-                    tech.icon as keyof typeof Icons
-                  ] as React.ComponentType<{ className?: string }>;
-                  return (
-                    <motion.div
-                      key={tech.name}
-                      variants={itemVariants}
-                      whileHover={{ scale: 1.05 }}
-                      className="flex items-center gap-3 p-3 bg-gray-50 dark:bg-gray-700 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200"
-                    >
-                      <span style={{ color: tech.color }}>
-                        <IconComponent className="w-6 h-6" />
-                      </span>
-
-                      <span className="text-gray-700 dark:text-gray-300 font-medium">
-                        {tech.name}
-                      </span>
-                    </motion.div>
-                  );
-                })}
-              </motion.div>
-            </motion.div>
+              {categoryLabels[category]}
+            </button>
           ))}
-        </div>
+        </motion.div>
+
+        <motion.div
+          layout
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6"
+        >
+          {displayedTechs.map((tech, index) => {
+            const IconComponent = Icons[
+              tech.icon as keyof typeof Icons
+            ] as React.ComponentType<{ className?: string }>;
+
+            return (
+              <motion.div
+                key={tech.name}
+                layout
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -8, scale: 1.05 }}
+                className="group relative bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <div className="relative">
+                    <motion.div
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-16 h-16 flex items-center justify-center rounded-xl bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 group-hover:shadow-lg transition-shadow"
+                    >
+                      <IconComponent
+                        className={`w-10 h-10 transition-transform duration-300 ${tech.color}`}
+                      />
+
+                    </motion.div>
+                  </div>
+
+                  <div className="text-center w-full">
+                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      {tech.name}
+                    </h3>
+
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2 overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        whileInView={{ width: `${tech.level}%` }}
+                        transition={{ duration: 1, delay: 0.2 }}
+                        viewport={{ once: true }}
+                        className="h-full rounded-full"
+                        style={{
+                          background: `linear-gradient(90deg, ${tech.color}, ${tech.color}dd)`,
+                        }}
+                      />
+                    </div>
+                    <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      {tech.level}%
+                    </p>
+                  </div>
+                </div>
+
+                <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-transparent to-transparent group-hover:from-blue-600/5 group-hover:to-indigo-600/5 transition-all duration-300 pointer-events-none" />
+              </motion.div>
+            );
+          })}
+        </motion.div>
       </div>
     </section>
   );

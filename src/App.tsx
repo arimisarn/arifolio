@@ -11,6 +11,8 @@ import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Footer from "./components/Footer";
 import arifolio from "./assets/arifolio.png";
+import About from "./components/About";
+import Contact from "./components/Contact";
 function App() {
   const [loading, setLoading] = useState(true);
   const { isDark, toggleDarkMode } = useDarkMode();
@@ -32,9 +34,8 @@ function App() {
 
   return (
     <div
-      className={`min-h-screen transition-colors duration-300 ${
-        isDark ? "dark" : ""
-      }`}
+      className={`min-h-screen transition-colors duration-300 ${isDark ? "dark" : ""
+        }`}
     >
       <div
         className={`
@@ -51,9 +52,8 @@ function App() {
         <img
           src={arifolio}
           alt="Arifolio"
-          className={`hidden lg:block fixed top-6 left-6 w-40 z-50 transition-all duration-500 drop-shadow-lg ${
-            isDark ? "opacity-70" : "opacity-90"
-          }`}
+          className={`hidden lg:block fixed top-6 left-6 w-40 z-50 transition-all duration-500 drop-shadow-lg ${isDark ? "opacity-70" : "opacity-90"
+            }`}
         />
 
         {/* Logo mobile : centré au-dessus du contenu */}
@@ -62,9 +62,13 @@ function App() {
 
         <main className="relative z-10">
           <Main />
+          <About />
+
           <TechnologiesSection />
           <ExperienceSection />
           <ProjectsSection />
+          <Contact />
+
           <Footer />
         </main>
       </div>
