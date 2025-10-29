@@ -11,8 +11,8 @@ import ExperienceSection from "./components/ExperienceSection";
 import ProjectsSection from "./components/ProjectsSection";
 import Footer from "./components/Footer";
 import arifolio from "./assets/arifolio.png";
-import About from "./components/About";
 import Contact from "./components/Contact";
+import About from "./components/About";
 function App() {
   const [loading, setLoading] = useState(true);
   const { isDark, toggleDarkMode } = useDarkMode();

@@ -154,7 +154,7 @@ export default function Contact() {
                 <meshStandardMaterial color="#6366f1" metalness={0.3} roughness={0.4} />
               </mesh>
               <Html distanceFactor={10} position={[0, -1.8, 0]}>
-                <div className="text-sm text-center text-gray-400">#CodeIsArt 💻</div>
+                <div className="text-sm text-center text-gray-400">#Arifolio 👩🏻‍💻💻</div>
               </Html>
             </Float>
             <OrbitControls enableZoom={false} />

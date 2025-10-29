@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Code2, Sparkles } from "lucide-react";
 import { FaReact, FaPython } from "react-icons/fa";
 import { SiDjango, SiTypescript, SiPostgresql, SiDocker } from "react-icons/si";
-import propos from "../assets/propos.jpg";
+import propos from "../assets/Gemini_Generated_Image_9c3u9n9c3u9n9c3u.png";
 
 export default function About() {
     return (
