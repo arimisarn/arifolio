@@ -2,6 +2,7 @@ import fiteny from "../assets/fiteny flow.png";
 import pf from "../assets/IMG_20250510_150605~2.jpg";
 import tsinjo from "../assets/tsinjo.png";
 import nathagram from "../assets/nathagram.png";
+import lorie from "../assets/lorie.png"
 
 import tailwind from "../assets/tailwind-css-trainer.png";
 
@@ -257,6 +258,18 @@ export const portfolioData: PortfolioData = {
       githubUrl: " ",
       liveUrl: " ",
       image: nathagram,
+    },
+      {
+      title: "Nathagram",
+      description: "Site de Réseau social inspiré de Facebook et Instagram",
+      technologies: [
+        "NextJS",
+        "TypeScript",
+        "Tailwindcss",
+      ],
+      githubUrl: " ",
+      liveUrl: "https://marilialauriane.vercel.app/",
+      image: lorie,
     },
   ],
 };
