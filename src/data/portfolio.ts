@@ -260,8 +260,8 @@ export const portfolioData: PortfolioData = {
       image: nathagram,
     },
       {
-      title: "Nathagram",
-      description: "Site de Réseau social inspiré de Facebook et Instagram",
+      title: "Portfolio de Marilia Lauriane",
+      description: "Développement d'un portfolio personnalisé pour Marilia Lauriane, mettant en valeur ses compétences et ses réalisations. Conçu avec une approche centrée sur l'utilisateur et une interface utilisateur intuitive.",
       technologies: [
         "NextJS",
         "TypeScript",
