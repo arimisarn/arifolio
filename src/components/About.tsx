@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Sparkles } from "lucide-react";
+import { Code2} from "lucide-react";
 import { FaReact, FaPython } from "react-icons/fa";
 import { SiDjango, SiTypescript, SiPostgresql, SiDocker } from "react-icons/si";
 import propos from "../assets/proimg.png";
