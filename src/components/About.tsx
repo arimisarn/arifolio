@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { Code2, Sparkles } from "lucide-react";
 import { FaReact, FaPython } from "react-icons/fa";
 import { SiDjango, SiTypescript, SiPostgresql, SiDocker } from "react-icons/si";
-import propos from "../assets/Gemini_Generated_Image_9c3u9n9c3u9n9c3u.png";
+import propos from "../assets/proimg.png";
 
 export default function About() {
     return (
@@ -22,15 +22,13 @@ export default function About() {
                 >
                     <motion.div
                         whileHover={{ scale: 1.05 }}
-                        className="relative w-[320px] sm:w-[380px] md:w-[420px] h-[420px] rounded-3xl overflow-hidden shadow-2xl"
+                        className="relative "
                     >
                         <img
                             src={propos}
                             alt="Portrait développeuse"
-                            className="w-full h-full object-cover rounded-3xl brightness-95"
+                            className="w-full h-full object-cover "
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent rounded-3xl"></div>
-                        <Sparkles className="absolute top-5 right-6 text-yellow-400 animate-pulse w-7 h-7" />
                     </motion.div>
                 </motion.div>
 
