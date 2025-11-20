@@ -38,7 +38,7 @@ const TechnologiesSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-12"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 style={{ fontFamily: "Elms Sans, sans-serif" }} className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Technologies & Compétences
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300">Mon stack technique et mes niveaux de maîtrise</p>
@@ -56,8 +56,8 @@ const TechnologiesSection: React.FC = () => {
               key={category}
               onClick={() => setActiveCategory(category)}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${activeCategory === category
-                  ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg scale-105"
-                  : "bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:shadow-md"
+                ? "bg-gradient-to-r from-blue-600 to-indigo-600 text-white shadow-lg scale-105"
+                : "bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:shadow-md"
                 }`}
             >
               {categoryLabels[category]}

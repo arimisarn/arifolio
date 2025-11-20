@@ -68,14 +68,14 @@ export const portfolioData: PortfolioData = {
       name: "HTML",
       icon: "SiHtml5",
       category: "frontend",
-      color: "#df690f",
+      color: "#E34F26",
       level: 90,
     },
     {
       name: "CSS",
       icon: "SiCss3",
       category: "frontend",
-      color: "#4f46e5",
+      color: "#1572B6",
       level: 90,
     },
     {
@@ -110,7 +110,7 @@ export const portfolioData: PortfolioData = {
       name: "Next.js",
       icon: "SiNextdotjs",
       category: "frontend",
-      color: "#ffffff",
+      color: "#000000",
       level: 70,
     },
     {
@@ -138,14 +138,14 @@ export const portfolioData: PortfolioData = {
       name: "MySQL",
       icon: "SiMysql",
       category: "database",
-      color: "#336791",
+      color: "#00758F",
       level: 60,
     },
      {
       name: "Sqlite",
       icon: "SiSqlite",
       category: "database",
-      color: "#336791",
+      color: "#86C9EF",
       level: 60,
     },
     {

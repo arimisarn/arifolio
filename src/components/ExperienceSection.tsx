@@ -16,7 +16,8 @@ const ExperienceSection: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-4xl font-bold text-center text-gray-900 dark:text-white mb-16"
+          style={{ fontFamily: "Elms Sans, sans-serif" }} 
+          className=" text-5xl font-bold text-center text-gray-900 dark:text-white mb-16"
         >
           Expériences
         </motion.h2>
